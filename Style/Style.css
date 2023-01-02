@@ -1,0 +1,574 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.flex{
+    counter-set: ponteiro-counter;
+}
+.Close-Menu{
+    display: none;
+}
+.BackToTop{
+    display: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+html{
+    overflow-x: hidden;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 1;
+    border-bottom: 1px solid rgb(228, 227, 227);
+    overflow-x: hidden;
+}
+.Barra_menu{
+    display: flex;
+    margin: 0 20%;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (min-width: 801px) and (max-width:990px) {
+    .Barra_menu{
+        margin: 0 10%;
+    }
+}
+.Barra_menu .centraliza{
+    align-items: center;
+    justify-content: center;
+}
+.Logo{
+    font-size: 35px;
+    padding: 1px 0 3px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.Opcoes_Menu{
+    list-style-type: none;
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+ul .opcoes a{
+    position: relative;
+    padding: 0 0 2px;
+}
+ul .opcoes a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background: rgb(0, 12, 182);
+    height: 0.1em;
+    transition: all 200ms;
+}
+ul .opcoes a:hover::after{
+    width: 100%;
+}
+.opcoes{
+    margin: 0 14px;
+    font-size: 21px;
+}
+.Home{
+    min-height: 100vh;
+    width: 100vw;
+    background-color: rgb(10,17,40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../Images/Curve\ Line\ \(2\).svg");
+    overflow-x: hidden;
+}
+.Apresentacao{
+    margin: 0 10px;
+    width: 1100px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_content{
+    height: 100%;
+    width: 40%;
+}
+.centraliza{
+    text-align: center;
+    display: block;
+}
+.Apresentacao .main_content .centraliza h1{
+    font-size: 50px;
+    color: white;
+    text-align: left;
+    margin: 10px 0 35px;
+}
+.Apresentacao .main_content .centraliza  p{
+    font-size: 28px;
+    color: white;
+    text-align: left;
+    
+}
+.main_image{
+    height: 100%;
+    width: 70%;
+}
+.main_image img{
+    width: 100%;
+    height: 100%;
+}
+.Intro{
+    min-height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.Intro .Intro_center{
+    margin: auto auto;
+    width: 728px;
+}
+.Intro .Intro_center h1{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 6%;
+}
+.Intro .Intro_center p{
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 6%;
+}
+.Top3{
+    min-height: 100vh;
+    width: 100vw;
+    background-color: rgb(10,17,40);
+    background-image: url("../Images/Curve\ Line\ \(2\).svg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.Top3 .Top3_center{
+    margin: auto 25px;
+    height: 70%;
+    width: 1100px;
+}
+.Top3 .Top3_center div h1{
+    font-size: 50px;
+    color: white;
+    text-align: left;
+    margin-bottom: 1%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.Top3 .Top3_center div p{
+    font-size: 24px;
+    color: white;
+    padding-left: 2px;
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    margin-bottom: 4%;
+}
+.Top3 .Top3_center .flex{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.flex div > h1::before{
+    font-size: 60px;
+    counter-increment:ponteiro-counter;
+    content: counter(ponteiro-counter);
+    position: relative;
+    left: -15px;
+    transform: rotate(5deg); 
+    font-style: italic;
+}
+.Gallery{
+    min-height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+.Gallery .Gallery_center div h1{
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    margin-bottom: 0.3em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.Gallery .Gallery_center div p{
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    margin-bottom: 1.3em;
+}
+.Gallery .container-image{
+    display: grid;
+    max-width: 1100px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.Gallery .container-image img{
+    max-width: 100%;
+    max-height: 100%;
+    transition: all 200ms;
+}
+.Gallery .Gallery_center .container-image div{
+    max-width: 360rem;
+    max-height: 360rem;
+    overflow: hidden;
+}
+.Gallery .container-image img:hover{
+    transform: scale(1.07) rotate(1deg);
+}
+.Work{
+    min-height: 100vh;
+    width: 100vw;
+    background-color: rgb(10,17,40);
+    background-image: url("../Images/Curve\ Line\ \(2\).svg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.Work .Work_center{
+    margin: auto 25px;
+    height: 70%;
+    width: 1100px;
+}
+.Work .Work_center div h1{
+    font-size: 50px;
+    color: white;
+    text-align: left;
+    margin-bottom: 1%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.Work .Work_center div p{
+    font-size: 24px;
+    color: white;
+    padding-left: 2px;
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    margin-bottom: 4%;
+}
+.Work .Work_center .flex{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.flex div > h1::before{
+    font-size: 60px;
+    counter-increment:ponteiro-counter;
+    content: counter(ponteiro-counter);
+    position: relative;
+    left: -15px;
+    transform: rotate(5deg); 
+    font-style: italic;
+}
+.Pricing{
+    min-height: 100vh;
+    display: flex;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+}
+.Pricing .Princing-Center .Pricing-Center-Table table{
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 600px; 
+}
+.Pricing .Princing-Center .Pricing-Center-Table table th{
+    background: #eee;
+}
+.Pricing .Princing-Center .Pricing-Center-Table table td{
+    border: 1px solid #eee;    
+    padding: 2px; 
+}
+.Pricing .Princing-Center .Pricing-Center-Table table td, table th {
+    padding: 5px 10px;
+    text-align: left;
+    font-size: 26px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.Pricing .Princing-Center .Pricing-Center-Table table caption{
+    text-align: start;
+    font-style: italic;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.Pricing .Princing-Center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1100px;
+}
+.Pricing .Princing-Center .Pricing-Center-Text{
+    text-align: center;
+    max-width: 720px; 
+}
+.Pricing .Princing-Center .Pricing-Center-Text h1, p{
+    margin-bottom: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.Pricing .Princing-Center .Pricing-Center-Text h1{
+    font-size: 56px;
+}
+.Pricing .Princing-Center .Pricing-Center-Text p{
+    font-size: 26px;
+}
+.Contact{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: rgb(10,17,40);
+    background-image: url("../Images/Curve\ Line\ \(2\).svg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+.Contact .Contact-Center{
+    max-width: 1350px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Contact .Contact-Center::placeholder{
+    color: #eee;
+}
+.Contact .Contact-Center .Contact-Center-Text{
+    justify-content: space-between;
+    display: flex;
+    width: 90%;
+    margin-bottom: 36px;
+    margin-top: 60px;
+}
+.Contact .Contact-Center .Contact-Center-Text > .text {
+    color: white;
+}
+
+.Contact .Contact-Center .Contact-Center-Text .text h1 {
+    font-size: 46px;
+    margin-bottom: 1.5rem;
+}
+.Contact .Contact-Center .Contact-Center-Text .text p {
+    font-size: 26px;
+}
+.Contact .Contact-Center .Contact-Center-Text .img {
+    min-width: 64%;
+    margin-left: 10px;
+}
+.Contact .Contact-Center .Contact-Center-Text .img img{
+    width: 100%;
+    height: 100%;
+}
+.Contact .Contact-Center .Contact-Center-Form{
+    width: 90%;
+}
+.Contact .Contact-Center .Contact-Center-Form legend{
+    text-align: left;
+    padding-left: 4px;
+    margin-bottom: 18px;
+    color: white;
+    font-style: italic;
+    font-size: 1.25rem;
+}
+.Contact .Contact-Center label {
+    color: white;
+}
+.Contact .Contact-Center .Contact-Center-Form .Centraliza {
+    display: flex;
+}
+.Contact .Contact-Center .Contact-Center-Form form{
+    width: 100%;
+}
+.Contact .Contact-Center .Contact-Center-Form form label{ 
+    font-size: 26px;
+    text-align: left;
+    padding-left: 2px;
+}
+.Contact .Contact-Center .Contact-Center-Form form input{ 
+    height: 48px;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    padding: 0.4rem;
+}
+.Contact .Contact-Center .Contact-Center-Form form .Centraliza{
+    justify-content: space-between;
+    width: 100%;
+}
+.Contact .Contact-Center .Contact-Center-Form form .Centraliza .first{
+    width: 48%;
+}
+.Contact .Contact-Center .Contact-Center-Form form .Centraliza .last{
+    width: 48%;
+}
+.Contact .Contact-Center .Contact-Center-Form form .Centraliza .first input{
+    width: 100%;
+}
+.Contact .Contact-Center .Contact-Center-Form form .Centraliza .last input{
+    width: 100%;
+}
+.Contact .Contact-Center .Contact-Center-Form form .Email input{
+    width: 100%;
+}
+.Contact .Contact-Center .Contact-Center-Form form .Caixa_Texto p textarea{ 
+    width: 100%;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    padding: 0.4rem;
+}
+.Contact .Contact-Center .Contact-Center-Form form .Submit_Button{
+    background: none;
+    border: 5px solid #fff;
+    border-radius: 3px;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.9rem;
+    transition: all 300ms ease-in-out;
+}
+.Contact .Contact-Center .Contact-Center-Form form .Submit_Button:hover{
+    color: black;
+    background: #fff;
+}
+
+footer{
+    height: 9vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+footer .div_footer div img{
+    margin-top: 8px;
+    margin-right: 5px;
+}
+
+@media (max-width:800px) {
+    body{
+        overflow-x: hidden
+    };
+    header{
+        border: none;
+    }
+    .Barra_menu{
+        bottom: 0;
+        height: 100vh;
+    }
+    header .Barra_menu{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    header .Barra_menu, .Barra_menu ul{
+        flex-direction: column;
+    }
+    .Barra_menu .Logo, .Barra_menu  .Opcoes_Menu li{
+        margin: 0 0 15px;
+    }
+    .Barra_menu{
+        display: none;
+    }
+    .Close-Menu{
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+    }
+    .Close-Menu{
+        display: none;
+    }
+    .Close-Menu_Label::after{
+        content: '☰';
+        position: fixed;
+        z-index: 2;
+        top: 1rem;
+        right: 1rem;
+        font-size: 2rem;
+        background-color: rgba(0, 0, 0, 0.849);
+        color: white;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        cursor: pointer;
+    }
+    .Close-Menu:checked~header .Barra_menu{
+        display: flex;
+    }
+    .Close-Menu:checked~ .Close-Menu_Label::after{
+        content: '✕';
+    }
+    .BackToTop{
+        position: fixed;
+        z-index: 2;
+        bottom: 1rem;
+        right: 1rem;
+        text-align: center;
+        width: 3rem;
+        height: 3rem;
+        font-size: 2rem;
+        background-color: rgba(255, 255, 255, 0.849);
+        color: rgb(0, 0, 0);
+        border-radius: 50% ;
+        border: 0.1rem solid rgba(0, 0, 0, 0.815);
+        transform:rotate(-90deg);
+    }
+    .Home .Apresentacao, .Home .Apresentacao .main_content, .Home .Apresentacao .main_image{
+        margin: 0 auto 10px;
+        display: block;
+        width: 92vw;
+    }
+    .Gallery .Gallery_center{
+        width: 90vw;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .Gallery .container-image{
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 14px;
+    }
+    .Gallery .container-image div img{
+        width: 100%;
+    }
+    .Contact{
+        background-size: cover;
+    }
+    .Contact .Contact-Center{
+        align-items: start;
+        position: relative;
+        left: 15px;
+    }
+    .Contact .Contact-Center .Contact-Center-Text{
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+    }
+    .Contact .Contact-Center .Contact-Center-Text .text {
+        width: 90%;
+    }
+    .Contact .Contact-Center .Contact-Center-Text .img {
+        width: 96%;
+    }
+
+}

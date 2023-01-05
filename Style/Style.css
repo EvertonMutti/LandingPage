@@ -457,14 +457,93 @@ footer{
     width: 100vw;
     background-color: rgb(255, 255, 255);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
 }
 
+footer .div_footer{
+    border-bottom: 1px solid rgb(228, 227, 227);
+}
+
 footer .div_footer div img{
     margin-top: 8px;
     margin-right: 5px;
+}
+.ProgressSkills{
+    padding-left: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.ProgressSkills h2{
+    margin-right: 8px;
+}
+.Skillsalign{
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+.ContainerProgressBar{
+    max-width: 300px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.ContainerProgressBar .Python{
+    height: 10px;
+    background-image: linear-gradient( to left, rgb(62,126,176), rgb(62,126,176), #39ADC4,  rgb(255,222,83));
+    border-radius: 10px;
+    width: 0%;
+    animation: python 1000ms linear forwards;
+}
+
+.ContainerProgressBar .KitWeb{
+    height: 10px;
+    background-image: linear-gradient(to left, #F7E018, #D6C315, #cec256, #cac381);
+    border-radius: 10px;
+    width: 0%;
+    animation: KitWeb 1000ms linear forwards;
+}
+.ContainerProgressBar .SqlServer{
+    height: 10px;
+    background-image: linear-gradient( to left, white, rgb(211, 211, 211), rgb(189, 189, 189), rgb(236, 95, 95), rgb(230, 80, 80));
+    border-radius: 10px;
+    width: 0%;
+    animation: SqlServer 1000ms linear forwards;
+}
+.ContainerProgressBar .MySql{
+    height: 10px;
+    background-image: linear-gradient( to right, #83d5d6, #32DFE3, #039396, #1E4C68);
+    border-radius: 10px;
+    width: 0%;
+    animation: MySql 1000ms linear forwards;
+}
+
+@keyframes python {
+    100%{
+        width: 80%;
+    }
+}
+
+@keyframes KitWeb {
+    100%{
+        width: 35%;
+    }
+}
+
+@keyframes SqlServer {
+    100%{
+        width: 60%;
+    }
+}
+
+@keyframes MySql {
+    100%{
+        width: 30%;
+    }
 }
 
 @media (max-width:800px) {
